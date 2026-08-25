@@ -18,7 +18,7 @@ const PENDING_TRACKING_POLL_MS = 1_000;
 const TRACKING_ID_GRAMMAR = /^[0-9a-z~_-]{1,16}$/;
 /**
  * Ceilings for the untrusted v2 layer fields. Both are far above any legitimate
- * payload (16 one-character tokens; a dozen short option assignments), so a
+ * payload (17 one-character tokens; a dozen short option assignments), so a
  * value past them is malformed or hostile. Reject the WHOLE payload, matching
  * the unknown-token rule — never salvage a prefix.
  */
@@ -289,6 +289,7 @@ export const LAYER_STATE_REGISTRY = Object.freeze([
   Object.freeze({ id: 'radio', token: 'r', disposition: 'enabled+options', optionOwner: 'radio' }),
   Object.freeze({ id: 'rocket-launches', token: 'x', disposition: 'enabled-only' }),
   Object.freeze({ id: 'satellites', token: 's', disposition: 'enabled+options', optionOwner: 'satellites' }),
+  Object.freeze({ id: 'space-weather', token: 'v', disposition: 'enabled-only' }),
   Object.freeze({ id: 'telegeography-submarine-cables', token: 'u', disposition: 'enabled-only' }),
   Object.freeze({ id: 'traffic', token: 't', disposition: 'enabled-only' }),
 ]);

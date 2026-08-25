@@ -7,7 +7,8 @@ import * as Cesium from 'cesium';
  * every third-party data layer this app can
  * display carries its own license and required attribution — ODbL (OSM
  * datacenters/dams, adsb.lol, Overpass roads), CC BY-NC-SA (TeleGeography
- * cables), NASA FIRMS, CelesTrak, USGS, City of Austin, GBFS operators, OpenSky.
+ * cables), NASA FIRMS, CelesTrak, NOAA SWPC, USGS, City of Austin, GBFS
+ * operators, OpenSky.
  * The MIT code license does NOT cover this data.
  *
  * These credits are registered ONCE at init as STATIC credits with
@@ -54,6 +55,12 @@ export const DATA_CREDITS = [
       'Satellites (TLEs): CelesTrak ' +
       '(<a href="https://celestrak.org" target="_blank" rel="noopener">celestrak.org</a>), ' +
       'Dr. T.S. Kelso',
+  },
+  {
+    key: 'noaa-swpc',
+    html:
+      'Space weather: ' +
+      '<a href="https://www.swpc.noaa.gov/" target="_blank" rel="noopener">NOAA Space Weather Prediction Center</a>',
   },
   {
     key: 'launch-library-2',

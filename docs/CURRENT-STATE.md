@@ -1597,6 +1597,7 @@ its criteria cannot be silently ignored.
 | Mapped Installations ⌖ | OpenStreetMap mapped context; on-demand Google Maps Places supplement | `src/data/militaryInstallations.js` | `/api/military-installations`, `/api/google/text-search` | viewport-driven + user search; while unavailable, auto-retry 30 s → 240 s backoff |
 | Earthquakes | USGS | `src/data/earthquakes.js` | — | 60s |
 | Satellites | CelesTrak | `src/data/satellites.js` | `/api/celestrak` | 120s |
+| Space Weather ☀️ | NOAA SWPC | `src/data/spaceWeather.js` | direct keyless JSON feeds | 120s |
 | Space Missions (30d) | Launch Library 2 + CelesTrak | `src/data/rocketLaunches.js` | `/api/launches` + `/api/celestrak/active` | 5 min |
 | Traffic | OSM Overpass (+ optional TomTom live flow) | `src/data/traffic.js` | `/api/overpass` + `/api/tomtom` | viewport-driven |
 | CCTV | Austin + Caltrans (CA) + TfL London Open Data + Street View fallback | `src/data/cctv.js` | `/api/cctv` | 10s (active) |
@@ -1610,6 +1611,16 @@ its criteria cannot be silently ignored.
 `src/data/militaryAwareness.js` remains registered internally as the Contacts
 coordinator, but it is not a user-visible Data Layers entry. Its visible entry
 point is the right-side `CONTEXT` chooser's `CONTACTS` mode.
+
+Space Weather is one composite environmental layer rather than four competing
+toggles. It fetches NOAA SWPC solar-wind speed, magnetic-field, planetary-K,
+and OVATION products directly, then reduces the dense auroral grid to one peak
+per five-degree longitude bucket and hemisphere. Two restrained oval lines and
+their peak points sit 110 km above the ellipsoid; the layer row carries the
+current Kp, wind speed, Bz, source freshness, and a two-colour legend. Partial
+feed failure keeps the last good components and reports `DEGRADED`; a total
+refresh failure keeps the last visual and reports `STALE`. Static refreshes use
+the manager's ordinary render request and never take a continuous-render hold.
 
 At global scale, ambient Radio cluster badges are hard-opacity shared-host
 entries: count/category updates and identity replacement do not run keyhole or
@@ -2013,7 +2024,7 @@ silently demoting every later lookup for the session.
   with compact fields for enabled layers, allowlisted layer options, panel state,
   and the active preset's allowlisted shader controls. An absent layer field uses
   deterministic defaults; an explicit empty field means no enabled layers.
-- The registry seals only after all 16 production layers register, and every
+- The registry seals only after all 17 production layers register, and every
   layer has an explicit serialization disposition. Unknown enabled-layer tokens
   reject the layer payload; unknown option tokens are ignored. Restoration
   settles independently per layer so one failed or unavailable source cannot

@@ -6,6 +6,7 @@ import flightsLayer from './data/flights.js';
 import militaryFlightsLayer from './data/militaryFlights.js';
 import earthquakesLayer from './data/earthquakes.js';
 import satellitesLayer from './data/satellites.js';
+import spaceWeatherLayer from './data/spaceWeather.js';
 import rocketLaunchesLayer from './data/rocketLaunches.js';
 import trafficLayer from './data/traffic.js';
 import cctvLayer from './data/cctv.js';
@@ -214,6 +215,7 @@ async function init() {
     dataManager.register(militaryFlightsLayer);
     dataManager.register(earthquakesLayer);
     dataManager.register(satellitesLayer);
+    dataManager.register(spaceWeatherLayer);
     dataManager.register(rocketLaunchesLayer);
     rocketLaunchesLayer.attachDataManager(dataManager);
     dataManager.register(trafficLayer);

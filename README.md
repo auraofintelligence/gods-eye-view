@@ -4,7 +4,7 @@
 
 ### A spy-satellite simulator in your browser — then you realize the sources are public and the data is real.
 
-Photorealistic 3D globe. Live aircraft, ships, satellites, earthquakes, traffic, and public cameras, with clearly labeled modeled views where a live feed is unavailable. Hands-free voice control powered by a realtime AI agent.
+Photorealistic 3D globe. Live aircraft, ships, satellites, space weather, earthquakes, traffic, and public cameras, with clearly labeled modeled views where a live feed is unavailable. Hands-free voice control powered by a realtime AI agent.
 
 *No place left behind.*
 
@@ -168,7 +168,7 @@ Twenty-eight tools, four jobs — the commands below come straight from the prod
 
 ## 🛰️ What's on the Globe
 
-Thirteen live layers. **Ten of them need nothing at all** — no key, no account, no signup. (🟢 nothing · 🟡 free key · 🔴 metered.)
+Fourteen live layers. **Eleven of them need nothing at all** — no key, no account, no signup. (🟢 nothing · 🟡 free key · 🔴 metered.)
 
 | Layer | What you get | Source | Auth |
 |-------|--------------|--------|------|
@@ -177,6 +177,7 @@ Thirteen live layers. **Ten of them need nothing at all** — no key, no account
 | 🎖️ **Military Flights** | ADS-B military traffic in amber | adsb.lol | 🟢 |
 | 🚢 **Live Vessels** | Thousands of ships worldwide | AISStream | 🟡 |
 | 🛰️ **Satellites** | A roughly 840-object core catalog, color-coded by class with a live legend — the **DENSE** chip drops in the whole Starlink shell | CelesTrak | 🟢 |
+| ☀️ **Space Weather** | Current solar-wind speed, interplanetary magnetic field, planetary K index, and a compressed auroral-oval view | NOAA SWPC | 🟢 |
 | 🌍 **Earthquakes** | Global seismic activity, last 24h | USGS | 🟢 |
 | 🚗 **Traffic** | Live congestion driving per-vehicle flow at street level — dive below ~8 km and the dots color to real jams. Keyless it's an approximate simulation | TomTom + OSM | 🟢 (🟡 TomTom makes it real — get one) |
 | 📹 **CCTV Mesh** | ~800 public cameras projected *into* the 3D space — Austin · California (Caltrans) · London (TfL). Positions are published; poses are estimated priors **you calibrate by dragging a gizmo on the camera itself** | City APIs | 🟢 |
@@ -265,7 +266,7 @@ See [`docs/CURRENT-STATE.md`](docs/CURRENT-STATE.md) for the authoritative runti
 
 **The legend, one more time:** 🟢 **no signup** — works out of the box · 🟡 **free key** — register, paste, done · 🔴 **metered** — a billing-enabled account; costs are small but real.
 
-Most of the globe is 🟢: flights (anonymous), military traffic, satellites, earthquakes, CCTV, radio, bikeshare, space missions, mapped installations, and every bundled dataset run with **zero keys**.
+Most of the globe is 🟢: flights (anonymous), military traffic, satellites, space weather, earthquakes, CCTV, radio, bikeshare, space missions, mapped installations, and every bundled dataset run with **zero keys**.
 
 ### What you need for the good experience
 
@@ -314,7 +315,7 @@ Honest numbers, roughly, as of mid-2026 — always check the provider pricing pa
 
 | | Cost reality |
 |---|---|
-| **🟢 Most layers** | **$0, no signup.** OpenSky anon, USGS, CelesTrak, adsb.lol, city CCTV, Radio Browser, GBFS, Launch Library 2, bundled datasets. |
+| **🟢 Most layers** | **$0, no signup.** OpenSky anon, USGS, CelesTrak, NOAA SWPC, adsb.lol, city CCTV, Radio Browser, GBFS, Launch Library 2, bundled datasets. |
 | **🟡 Optional developer access** | AISStream, FIRMS, TomTom, Cesium ion, and authenticated OpenSky may offer no-cost access, but limits and permitted uses differ. Cesium ion and OpenSky in particular have plan or use restrictions; verify the current provider terms for your deployment. |
 | **🔴 Google 3D tiles** | Map Tiles usage is billed by session, with current prices and free-usage caps varying by billing region. Check Google's pricing page, restrict the key, set quotas, and configure a budget alert before sustained use. |
 | **🔴 OpenAI voice** | Realtime audio is usage-metered and the total depends on the selected model, conversation length, and audio volume. The app shows a live session estimate, warns at $2, and applies a **$5 in-app session cap**; provider-side usage limits remain the billing backstop. |
