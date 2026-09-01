@@ -2,6 +2,8 @@
 
 # 🌐 God's Eye View
 
+> **Fork provenance:** GitHub records this repository as a fork of [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view). The existing README and media context below are retained. This notice makes no additional claim about authorship, endorsement or live-data provenance.
+
 ### A spy-satellite simulator in your browser — then you realize the sources are public and the data is real.
 
 Photorealistic 3D globe. Live aircraft, ships, satellites, earthquakes, traffic, and public cameras, with clearly labeled modeled views where a live feed is unavailable. Hands-free voice control powered by a realtime AI agent.
@@ -17,6 +19,28 @@ Photorealistic 3D globe. Live aircraft, ships, satellites, earthquakes, traffic,
 ▶️ **From the project behind the viral God's Eye View series** *(formerly WorldView)* — [5M+ on YouTube](https://youtube.com/playlist?list=PL6qSg2I-7_koPbDnSMo0QeeHX_RknA2uv&si=nBGYMoHWQw41v93Q)
 
 </div>
+
+<!-- github-organisation:start -->
+
+## Project links and history
+
+- First substantive build: 22 June 2026.
+- GitHub repository: [gods-eye-view](https://github.com/auraofintelligence/gods-eye-view).
+- Public site: [visit the public site](https://www.spatialintelligence.ai/).
+
+## Related public projects
+
+Each link below reflects an evidenced family, lineage or direct connection. This project has 5 relevant public connections.
+
+### Space-weather and cosmic research tools
+
+- [extreme-matter-atlas](https://github.com/auraofintelligence/extreme-matter-atlas) - [public page](https://auraofintelligence.github.io/extreme-matter-atlas/) - shared research architecture.
+- [micronova-and-excursions](https://github.com/auraofintelligence/micronova-and-excursions) - [public page](https://auraofintelligence.github.io/micronova-and-excursions/) - shared research architecture.
+- [space-weather-news](https://github.com/auraofintelligence/space-weather-news) - [public page](https://auraofintelligence.github.io/space-weather-news/) - shared research architecture.
+- [strange-but-true-cosmic-nexus](https://github.com/auraofintelligence/strange-but-true-cosmic-nexus) - [public page](https://auraofintelligence.github.io/strange-but-true-cosmic-nexus/) - shared research architecture.
+- [virtual-solar-swarm](https://github.com/auraofintelligence/virtual-solar-swarm) - [public page](https://auraofintelligence.github.io/virtual-solar-swarm/) - shared research architecture.
+
+<!-- github-organisation:end -->
 
 ---
 
